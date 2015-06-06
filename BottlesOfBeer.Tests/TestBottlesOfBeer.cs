@@ -46,5 +46,14 @@ namespace BottlesOfBeer.Tests
           //assert
           Assert.IsTrue(result.EndsWith("Take one down and pass it around, no more bottles of beer on the wall."));
         }
+
+        [TestMethod]
+        public void TestThatVerse100HasNoBottlesToBeginWith(){
+          //act
+          var result = sut.GetVerse(100);
+
+          //assert
+          Assert.IsTrue(result.StartsWith("No more bottles of beer on the wall, no more bottles of beer."));
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace BottlesOfBeer
             StringBuilder outputBuilder = new StringBuilder();
             int beerQty = 100 - verseNo;
           
-            outputBuilder.Append(String.Format("{0} {1} of beer on the wall, {0} {1} of beer.\n", beerQty, QuantifyBottle(beerQty).ToLower()));
+            outputBuilder.Append(String.Format("{0} {1} of beer on the wall, {2} {1} of beer.\n", ParseBeerQty(beerQty), QuantifyBottle(beerQty).ToLower(), ParseBeerQty(beerQty).ToLower()));
             if(beerQty == 0){
               
             }else{
