@@ -38,5 +38,13 @@ namespace BottlesOfBeer.Tests
           //assert
           Assert.IsTrue(result.Contains("Take one down and pass it around, 1 bottle of beer on the wall."));
         }
+
+        [TestMethod]
+        public void TestThatGetVerse99HasNoBottlesLeftOnWall(){
+          //act
+          var result = sut.GetVerse(99);
+          //assert
+          Assert.IsTrue(result.EndsWith("Take one down and pass it around, no more bottles of beer on the wall."));
+        }
     }
 }

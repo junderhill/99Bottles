@@ -13,7 +13,7 @@ namespace BottlesOfBeer
             if(beerQty == 0){
               
             }else{
-              outputBuilder.Append(String.Format("Take one down and pass it around, {0} {1} of beer on the wall.", beerQty-1, QuantifyBottle(beerQty-1).ToLower()));
+              outputBuilder.Append(String.Format("Take one down and pass it around, {0} {1} of beer on the wall.", ParseBeerQty(beerQty-1).ToLower(), QuantifyBottle(beerQty-1).ToLower()));
             }
             return outputBuilder.ToString();
         }
@@ -26,6 +26,16 @@ namespace BottlesOfBeer
           else
           {
             return "Bottle";
+          }
+        }
+
+        private string ParseBeerQty(int qty){
+          if(qty > 0){
+            return qty.ToString();
+          }
+          else
+          {
+            return "No more";
           }
         }
     }
