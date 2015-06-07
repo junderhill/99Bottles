@@ -55,5 +55,13 @@ namespace BottlesOfBeer.Tests
           //assert
           Assert.IsTrue(result.StartsWith("No more bottles of beer on the wall, no more bottles of beer."));
         }
+
+        [TestMethod]
+        public void TestThatVerse100SecondLineStatesGoToStore(){
+          //act
+          var result = sut.GetVerse(100);
+          //assert
+          Assert.IsTrue(result.Contains("\nGo to the store and buy some more,"));
+        }
     }
 }

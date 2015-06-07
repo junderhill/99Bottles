@@ -11,7 +11,7 @@ namespace BottlesOfBeer
           
             outputBuilder.Append(String.Format("{0} {1} of beer on the wall, {2} {1} of beer.\n", ParseBeerQty(beerQty), QuantifyBottle(beerQty).ToLower(), ParseBeerQty(beerQty).ToLower()));
             if(beerQty == 0){
-              
+              outputBuilder.Append(String.Format("Go to the store and buy some more,"));              
             }else{
               outputBuilder.Append(String.Format("Take one down and pass it around, {0} {1} of beer on the wall.", ParseBeerQty(beerQty-1).ToLower(), QuantifyBottle(beerQty-1).ToLower()));
             }
