@@ -63,5 +63,13 @@ namespace BottlesOfBeer.Tests
           //assert
           Assert.IsTrue(result.Contains("\nGo to the store and buy some more,"));
         }
+
+        [TestMethod]
+        public void TestThatVerse100EndsWith99BottlesOnWall(){
+          //act
+          var result = sut.GetVerse(100); 
+          //assert
+          Assert.IsTrue(result.EndsWith(", 99 bottles of beer on the wall."));
+        }
     }
 }
