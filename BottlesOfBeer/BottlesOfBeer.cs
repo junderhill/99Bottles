@@ -21,7 +21,7 @@ namespace BottlesOfBeer
 
         private static void ValidateVerse(int verseNo)
         {
-            if (verseNo < 1)
+            if (verseNo < 1 || verseNo > 100)
             {
                 throw new InvalidVerseException();
             }

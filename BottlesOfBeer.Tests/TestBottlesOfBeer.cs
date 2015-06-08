@@ -78,5 +78,19 @@ namespace BottlesOfBeer.Tests
             {
             }
         }
+
+        [TestMethod]
+        public void TestThatInvalidVerseExceptionIsThrownForVerse101()
+        {
+            //act
+            try
+            {
+                BottlesOfBeer.GetVerse(101);
+                Assert.Fail("InvalidVerseException wasn't thrown");
+            }
+            catch (InvalidVerseException)
+            {
+            }
+        }
     }
 }
