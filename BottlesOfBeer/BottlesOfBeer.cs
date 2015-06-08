@@ -6,6 +6,7 @@ namespace BottlesOfBeer
     {
         public static string GetVerse(int verseNo)
         {
+            ValidateVerse(verseNo);
             StringBuilder outputBuilder = new StringBuilder();
             int beerQty = 100 - verseNo;
           
@@ -16,6 +17,14 @@ namespace BottlesOfBeer
               outputBuilder.Append(String.Format("Take one down and pass it around, {0} {1} of beer on the wall.", ParseBeerQty(beerQty-1).ToLower(), QuantifyBottle(beerQty-1).ToLower()));
             }
             return outputBuilder.ToString();
+        }
+
+        private static void ValidateVerse(int verseNo)
+        {
+            if (verseNo < 1)
+            {
+                throw new InvalidVerseException();
+            }
         }
 
         private static string QuantifyBottle(int qty){

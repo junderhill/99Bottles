@@ -65,5 +65,18 @@ namespace BottlesOfBeer.Tests
           //assert
           Assert.IsTrue(result.EndsWith(", 99 bottles of beer on the wall."));
         }
+
+        [TestMethod]
+        public void TestThatInvalidVerseExceptionIsThrownForVerse0(){
+            //act
+            try
+            {
+                BottlesOfBeer.GetVerse(0);
+                Assert.Fail("InvalidVerseException wasn't thrown");
+            }
+            catch (InvalidVerseException)
+            {
+            }
+        }
     }
 }
