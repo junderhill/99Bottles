@@ -1,13 +1,15 @@
 ﻿using System;
+
 namespace BottlesOfBeer
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-           for(int i = 1; i <= 100; i++){
-              Console.WriteLine(BottlesOfBeer.GetVerse(i));
-           }
+            for (var i = 1; i <= 100; i++)
+            {
+                Console.WriteLine(BottlesOfBeer.GetVerse(i));
+            }
         }
     }
 }
