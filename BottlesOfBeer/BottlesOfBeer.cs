@@ -4,11 +4,13 @@ namespace BottlesOfBeer
 {
     public static class BottlesOfBeer
     {
+        public static int VERSES;
+
         public static string GetVerse(int verseNo)
         {
             ValidateVerse(verseNo);
             var outputBuilder = new StringBuilder();
-            var beerQty = 100 - verseNo;
+            var beerQty = VERSES - verseNo;
 
             outputBuilder.Append(string.Format("{0} {1} of beer on the wall, {2} {1} of beer.\n", ParseBeerQty(beerQty),
                 QuantifyBottle(beerQty).ToLower(), ParseBeerQty(beerQty).ToLower()));
@@ -26,7 +28,7 @@ namespace BottlesOfBeer
 
         private static void ValidateVerse(int verseNo)
         {
-            if (verseNo < 1 || verseNo > 100)
+            if (verseNo < 1 || verseNo > VERSES)
             {
                 throw new InvalidVerseException();
             }
