@@ -89,7 +89,7 @@ namespace BottlesOfBeer.Tests
             //act
             try
             {
-            BottlesOfBeer.VERSES = 100;
+                BottlesOfBeer.VERSES = 100;
                 BottlesOfBeer.GetVerse(0);
                 Assert.Fail("InvalidVerseException wasn't thrown");
             }
@@ -104,7 +104,7 @@ namespace BottlesOfBeer.Tests
             //act
             try
             {
-            BottlesOfBeer.VERSES = 100;
+                BottlesOfBeer.VERSES = 100;
                 BottlesOfBeer.GetVerse(101);
                 Assert.Fail("InvalidVerseException wasn't thrown");
             }
